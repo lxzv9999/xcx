@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<!--search  -->
+<view class='page_row' bindtap="suo">
+
+    <view class="search">
+
+      <view class="df search_arr">
+
+        <icon class="searchcion" size='20' type='search'></icon>
+
+        <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}"/>
+
+      </view>
+
+    </view>
+
+    <view class='sousuo'>搜索</view>
+
+  </view>
+<!-- <input type='search' placeholder='请搜索需要的商品'></input> -->
+
+ <view class='swiper'>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view> 
+<!--swiper  -->
+<view class='tab'>
+<view class='tab-content'>
+<view class='tab-hr'><image src='../img/hr_03.jpg'></image>红人店</view>
+<view class='tab-zb'><image src='../img/hr_05.jpg'></image>直播</view>
+<view class='tab-yx'><image src='../img/hr_07.jpg'></image>优选</view>
+<view class='tab-qd'><image src='../img/hr_09.jpg'></image>签到</view>
+<view class='tab-yhh'><image src='../img/hr_11.jpg'></image>有好货</view>
+
+</view>
+
+</view>
+
+
+<view class='content'>
+<view class='content-photo'><image src='../img/timg-(1)_03.jpg' alt="加载失败"></image>
+ <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+    <block wx:for="{{msgList}}">
+     <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
+       <swiper-item>
+         <view class="swiper_item">{{item.title}}</view>
+       </swiper-item>      
+       </navigator>
+     </block>
+   </swiper>
+
+
+
+</view>
+</view>
+<!--footer  -->
+ <view class='tab'>
+<view class='tab-content'>
+<view class='tab-hr'><image src='../img/hr_07.jpg'></image>首页</view>
+<view class='tab-zb'><image src='../img/hr_03.jpg'></image>买买买</view>
+<view class='tab-yx'><image src='../img/hr_11.jpg'></image>动态</view>
+<view class='tab-qd'><image src='../img/hr_09.jpg'></image>购物车</view>
+<view class='tab-yhh'><image src='../img/hr_05.jpg'></image>我的</view>
+
+</view>
+
+</view>
+
+
+
+
+
+
+
